@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+<main>
+  <div class="main-container">
+    <div class="image-block">
+        <picture>
+          <source media="(min-width: 90rem)" srcset="assets\images\illustration-sign-up-desktop.svg">
+          <source media="(min-width: 48rem)" srcset="assets\images\illustration-sign-up-tablet.svg">
+          
+          <img src="assets\images\illustration-sign-up-mobile.svg" alt="illustration sign up image">
+        </picture>
+      </div>
+    <div class="main-wrapper">
+      <div class="main-block">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="preim-list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form id="form" novalidate>
+          <div class="form-el">
+            <label class="label" for="email">Email address</label>
+            <input placeholder="email@company.com" id="email" name="email" type="email">
+            <span aria-live="polite" id="email-error"></span>
+          </div>
+
+          <button class="submit-btn">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

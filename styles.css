@@ -1,0 +1,113 @@
+:root{
+    --red: hsl(4, 100%, 67%);
+    --blue700: hsl(235, 18%, 26%);
+    --blue800: hsl(234, 29%, 20%);
+    --grey: hsl(0, 0%,58%);
+    --white: hsl(0, 0%, 100%);
+    --border-radius: 0.5rem;
+    --container-sm: 23.438rem;
+}
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;  
+}
+.image-block{
+    
+    
+    
+}
+.image-block picture img{
+    width: 100%;
+    
+    
+}
+
+.main-container{
+    margin: auto;
+    width: min(100%, var(--container-sm));
+}
+.main-wrapper{
+    width: min(90%, 20.438rem);
+    justify-self: center;
+}
+h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--blue800);
+}
+p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--blue800);
+    margin: 1.5rem 0;
+}
+.preim-list{
+    list-style: none;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--blue800);
+    padding: 0;
+    list-style-position: inside;
+}
+.preim-list li{
+    display: grid;
+    grid-template-columns: 1.313rem 1fr;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+.preim-list li::before{
+    content: "";
+    grid-column: 1;
+    width: 1.313rem; 
+    height: 1.313rem;
+    background: url(assets/images/icon-list.svg) center/cover no-repeat;
+    margin-top: 0.05em;
+}
+
+
+.label{
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--blue800);
+    margin: 2rem 0 0.5rem;
+}
+#email{
+    padding: 1rem 1.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+.main-block{
+    display: grid;
+    margin-top: 2.5rem;
+}
+#form{
+    display: grid;
+}
+.form-el{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.submit-btn{
+    font-family: Roboto, sans-serif;  
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--blue800);
+    padding: 1.2rem 2rem;
+    border: 0;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
