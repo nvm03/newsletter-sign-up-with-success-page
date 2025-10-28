@@ -6,31 +6,37 @@
     --white: hsl(0, 0%, 100%);
     --border-radius: 0.5rem;
     --container-sm: 23.438rem;
+    --container-md: 38rem;
+
+    --wrapper-sm: 20.438rem;
+    --wrapper-md: 33rem;
 }
 body{
-    
+    margin: 0;
+    height: 100vh;
+    background-color: var(--blue700);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Roboto, sans-serif;  
 }
+
 .image-block{
-    
-    
-    
+    /* width: 100%; */
 }
 .image-block picture img{
-    width: 100%;
-    
-    
+    display: flex;
+    justify-self: center;
 }
 
 .main-container{
+    background-color: var(--white);
     margin: auto;
     width: min(100%, var(--container-sm));
+    border-radius: 1.5rem;
 }
 .main-wrapper{
-    width: min(90%, 20.438rem);
+    width: min(90%, var(--wrapper-sm));
     justify-self: center;
 }
 h1{
@@ -110,4 +116,55 @@ p{
     border: 0;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
+}
+
+@media (min-width:48rem) {
+    .main-container{
+       width: 100%;
+       padding: 1.5rem;
+    }
+    .main-wrapper{
+        width: var(--wrapper-md);
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    .label{
+        margin: 1.5rem 0 0.5rem;
+    }
+    #email{
+        margin-bottom: 1rem;
+    }
+    .submit-btn{
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (min-width:90rem) {
+    .main-container{
+       width: min(100%, 56.5rem);
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       padding: 2rem 0;
+    }
+    .main-wrapper{
+        width: 85%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .image-block{
+       grid-column: 2; 
+    }
+    p{
+        margin: 2rem 0;
+    }
+    .label{
+        margin: 2rem 0 0.5rem;
+    }
+    .submit-btn:hover{
+        --c1:#FF6A3A;
+        --c2:#FF527B;
+        background: linear-gradient(90deg,var(--c1) 0%,var(--c2) 100%);
+    }
 }
