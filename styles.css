@@ -1,5 +1,6 @@
 :root{
     --red: hsl(4, 100%, 67%);
+    --red100: hsl(2, 100%, 95%);
     --blue700: hsl(235, 18%, 26%);
     --blue800: hsl(234, 29%, 20%);
     --grey: hsl(0, 0%,58%);
@@ -78,14 +79,15 @@ p{
 }
 
 
-.label{
+.label, #email-error{
     font-weight: 700;
     font-size: 0.75rem;
     line-height: 1.5;
     color: var(--blue800);
     margin: 2rem 0 0.5rem;
 }
-#email{
+input:focus { outline: none; box-shadow: none; }
+.email-input{
     padding: 1rem 1.5rem;
     font-weight: 400;
     font-size: 1rem;
@@ -94,7 +96,14 @@ p{
     border: 1px solid var(--grey);
     border-radius: var(--border-radius);
     margin-bottom: 1.5rem;
+    grid-column: 1 / -1;
 }
+.input-error{
+    color: var(--red);   
+    border: 1px solid var(--red);
+    background-color: var(--red100);
+}
+
 .main-block{
     display: grid;
     margin-top: 2.5rem;
@@ -104,7 +113,7 @@ p{
 }
 .form-el{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 .submit-btn{
     font-family: Roboto, sans-serif;  
@@ -118,6 +127,15 @@ p{
     margin-bottom: 2rem;
 }
 
+
+#email-error{
+    color: var(--red);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    justify-self: flex-end;
+}
+
 @media (min-width:48rem) {
     .main-container{
        width: 100%;
@@ -129,7 +147,7 @@ p{
     h1{
         font-size: 3.5rem;
     }
-    .label{
+    .label, #email-error{
         margin: 1.5rem 0 0.5rem;
     }
     #email{
@@ -159,7 +177,7 @@ p{
     p{
         margin: 2rem 0;
     }
-    .label{
+    .label, #email-error{
         margin: 2rem 0 0.5rem;
     }
     .submit-btn:hover{
