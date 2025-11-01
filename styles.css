@@ -38,7 +38,7 @@ body{
 }
 .main-wrapper{
     width: min(90%, var(--wrapper-sm));
-    justify-self: center;
+    margin: auto;
 }
 h1{
     margin: 0;
