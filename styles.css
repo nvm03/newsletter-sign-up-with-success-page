@@ -116,6 +116,7 @@ input:focus { outline: none; box-shadow: none; }
     grid-template-columns: repeat(2, 1fr);
 }
 .submit-btn{
+    cursor: pointer;
     font-family: Roboto, sans-serif;  
     font-weight: 700;
     font-size: 1rem;
@@ -180,9 +181,9 @@ input:focus { outline: none; box-shadow: none; }
     .label, #email-error{
         margin: 2rem 0 0.5rem;
     }
-    .submit-btn:hover{
-        --c1:#FF6A3A;
-        --c2:#FF527B;
-        background: linear-gradient(90deg,var(--c1) 0%,var(--c2) 100%);
-    }
+    .submit-btn-hover{
+    --c1:#FF6A3A;
+    --c2:#FF527B;
+    background: linear-gradient(90deg,var(--c1) 0%,var(--c2) 100%);
+}
 }
